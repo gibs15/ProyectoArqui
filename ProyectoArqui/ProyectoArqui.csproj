@@ -52,6 +52,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\ContextoHilillo.cs" />
+    <Compile Include="Logica\Hilillo.cs" />
+    <Compile Include="Logica\Instruccion.cs" />
+    <Compile Include="Logica\Nucleo.cs" />
+    <Compile Include="Logica\Quantum.cs" />
+    <Compile Include="Logica\Referencias.cs" />
+    <Compile Include="Logica\Utilidades.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
