@@ -55,6 +55,7 @@
     <Compile Include="Logica\ContextoHilillo.cs" />
     <Compile Include="Logica\Hilillo.cs" />
     <Compile Include="Logica\Instruccion.cs" />
+    <Compile Include="Logica\Lock.cs" />
     <Compile Include="Logica\Nucleo.cs" />
     <Compile Include="Logica\Quantum.cs" />
     <Compile Include="Logica\Referencias.cs" />
