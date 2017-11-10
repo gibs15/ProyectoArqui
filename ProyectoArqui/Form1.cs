@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +46,25 @@ namespace ProyectoArqui
             }
         }
 
-        
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            string directoryPath = Path.GetDirectoryName(openFileDialog1.InitialDirectory + openFileDialog1.FileName);
+
+            try
+            {
+                using (StreamReader reader = File.OpenText(directoryPath))
+                {
+                    string s = "";
+                    while ((s = reader.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s);
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                Console.WriteLine(Ex.ToString());
+            }
+        }
     }
 }

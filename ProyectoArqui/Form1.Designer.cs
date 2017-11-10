@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnIniciar = new System.Windows.Forms.Button();
-            this.txtQuantum = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtQuantum = new System.Windows.Forms.TextBox();
+            this.btnIniciar = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,33 +48,6 @@
             this.panel1.Size = new System.Drawing.Size(271, 153);
             this.panel1.TabIndex = 0;
             // 
-            // btnIniciar
-            // 
-            this.btnIniciar.Location = new System.Drawing.Point(94, 101);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
-            this.btnIniciar.TabIndex = 0;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
-            // txtQuantum
-            // 
-            this.txtQuantum.Location = new System.Drawing.Point(94, 57);
-            this.txtQuantum.Name = "txtQuantum";
-            this.txtQuantum.Size = new System.Drawing.Size(75, 20);
-            this.txtQuantum.TabIndex = 1;
-    
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Quantum:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -85,6 +59,37 @@
             this.label2.Text = "SIMULADOR MIPS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Quantum:";
+            // 
+            // txtQuantum
+            // 
+            this.txtQuantum.Location = new System.Drawing.Point(94, 57);
+            this.txtQuantum.Name = "txtQuantum";
+            this.txtQuantum.Size = new System.Drawing.Size(75, 20);
+            this.txtQuantum.TabIndex = 1;
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.Location = new System.Drawing.Point(94, 101);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciar.TabIndex = 0;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Form1
             // 
@@ -108,6 +113,7 @@
         private System.Windows.Forms.TextBox txtQuantum;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
