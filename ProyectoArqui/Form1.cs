@@ -59,7 +59,8 @@ namespace ProyectoArqui
             openFileDialog1.Multiselect = true;
 
             openFileDialog1.ShowDialog();
-          
+            List<List<String>> listaHilillos = new List<List<String>>();
+
 
             try
             {
@@ -68,24 +69,23 @@ namespace ProyectoArqui
                 int cont = 1;
                 foreach (String file in openFileDialog1.FileNames)
                 {
+                    //para enviarlo al controlador de hilillos.
+                    List<string> lista = new List<string>();
+                    string lineasTodoElArchivo = String.Empty;
+
+                    //para mostrar en pantalla.
                     txtArchivo.AppendText("Archivo " + cont +"\n");
                     string[] lines = System.IO.File.ReadAllLines(file);
                     foreach (string line in lines)
                     {
                         txtArchivo.AppendText(line+"\n");
+
+                        lineasTodoElArchivo = lineasTodoElArchivo + "" + line;
                     }
-                   
+                    lista.Add(lineasTodoElArchivo);
+                    listaHilillos.Add(lista);
                     cont++;
-
-
-
-
                 }
-                //    using (System.IO.StreamReader reader = new System.IO.StreamReader(fileStream))
-                //{
-                //    // Read the first line from the file and write it the textbox.
-                //    txtArchivo.Text = reader.ReadLine();
-                //}
                 fileStream.Close();
             }
             catch (Exception Ex)
