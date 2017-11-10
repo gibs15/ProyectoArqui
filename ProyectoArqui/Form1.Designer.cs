@@ -34,6 +34,8 @@
             this.txtQuantum = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtArchivo = new System.Windows.Forms.TextBox();
+            this.btnCargarArchivos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,13 +91,33 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            //this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // txtArchivo
+            // 
+            this.txtArchivo.Location = new System.Drawing.Point(842, 12);
+            this.txtArchivo.Multiline = true;
+            this.txtArchivo.Name = "txtArchivo";
+            this.txtArchivo.Size = new System.Drawing.Size(294, 153);
+            this.txtArchivo.TabIndex = 4;
+            // 
+            // btnCargarArchivos
+            // 
+            this.btnCargarArchivos.Location = new System.Drawing.Point(638, 205);
+            this.btnCargarArchivos.Name = "btnCargarArchivos";
+            this.btnCargarArchivos.Size = new System.Drawing.Size(134, 23);
+            this.btnCargarArchivos.TabIndex = 4;
+            this.btnCargarArchivos.Text = "Cargar Archivos";
+            this.btnCargarArchivos.UseVisualStyleBackColor = true;
+            this.btnCargarArchivos.Click += new System.EventHandler(this.btnCargarArchivos_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1389, 634);
+            this.Controls.Add(this.btnCargarArchivos);
+            this.Controls.Add(this.txtArchivo);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -103,6 +125,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -114,6 +137,8 @@
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtArchivo;
+        private System.Windows.Forms.Button btnCargarArchivos;
     }
 }
 

@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace ProyectoArqui
@@ -36,7 +37,7 @@ namespace ProyectoArqui
                 {
                     int ValorQuantum = Convert.ToInt32(txtQuantum.Text);
                 }
-                catch (Exception ex) {
+                catch (Exception) {
                     MessageBox.Show("El valor ingresado no fue un numero entero.");
                     txtQuantum.Text = String.Empty;
                 }
@@ -46,20 +47,46 @@ namespace ProyectoArqui
             }
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+       /* private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             string directoryPath = Path.GetDirectoryName(openFileDialog1.InitialDirectory + openFileDialog1.FileName);
 
+            
+        }*/
+
+        private void btnCargarArchivos_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Multiselect = true;
+
+            openFileDialog1.ShowDialog();
+          
+
             try
             {
-                using (StreamReader reader = File.OpenText(directoryPath))
+                System.IO.Stream fileStream = openFileDialog1.OpenFile();
+
+                int cont = 1;
+                foreach (String file in openFileDialog1.FileNames)
                 {
-                    string s = "";
-                    while ((s = reader.ReadLine()) != null)
+                    txtArchivo.AppendText("Archivo " + cont +"\n");
+                    string[] lines = System.IO.File.ReadAllLines(file);
+                    foreach (string line in lines)
                     {
-                        Console.WriteLine(s);
+                        txtArchivo.AppendText(line+"\n");
                     }
+                   
+                    cont++;
+
+
+
+
                 }
+                //    using (System.IO.StreamReader reader = new System.IO.StreamReader(fileStream))
+                //{
+                //    // Read the first line from the file and write it the textbox.
+                //    txtArchivo.Text = reader.ReadLine();
+                //}
+                fileStream.Close();
             }
             catch (Exception Ex)
             {
