@@ -12,7 +12,7 @@ namespace ProyectoArqui.Logica
         public int PC { get; set; }
         public int[] Registros { get; set; }
         public int IdNucleo = -1;
-
+      
         public Instruccion[,] CacheInstrucciones = new Instruccion[5, 4];
         public int[,] CacheDatos = new int[6, 4];
 
