@@ -26,6 +26,9 @@ namespace ProyectoArqui.Logica
         //Ejecuta instrucciones del ALU
         public bool ejecutarInstruccion(Instruccion instruccion)
         {
+            /*
+             sumar cuatro al pc , cada vez que tiene una nueva lectura de instruccion.             
+             */
             bool result = false;
             switch (instruccion.CodigoOp)
             {
