@@ -19,6 +19,8 @@ namespace ProyectoArqui
             InitializeComponent();
         }
 
+        //este es un push de prueba hecho por jose valverde
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
