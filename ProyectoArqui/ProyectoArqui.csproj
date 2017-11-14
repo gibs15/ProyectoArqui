@@ -53,6 +53,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\CacheInstrucciones.cs" />
     <Compile Include="Logica\ContextoHilillo.cs" />
     <Compile Include="Logica\Hilillo.cs" />
     <Compile Include="Logica\Instruccion.cs" />

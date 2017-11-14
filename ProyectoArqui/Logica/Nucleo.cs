@@ -28,13 +28,6 @@ namespace ProyectoArqui.Logica
         public Nucleo(int id)
         {
             IdNucleo = id;
-            for(int i=0; i<=5; i++)
-            {
-                for (int j = 0; j <= 4; j++) {
-                    CacheInstrucciones[i, j] = ;
-
-                }
-            }
         }
 
         //Ejecuta instrucciones del ALU
