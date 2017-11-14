@@ -11,6 +11,9 @@ namespace ProyectoArqui.Logica
         //Codigo de Operacion ya codificada en Utilidades
         public Utilidades.CodigosInst CodigoOp { get; set; }
 
+        
+        
+        
         //Registro fuente 1
         public int RF1 = 0;
 

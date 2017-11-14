@@ -12,8 +12,15 @@ namespace ProyectoArqui.Logica
         public int PC { get; set; }
         public int[] Registros { get; set; }
         public int IdNucleo = -1;
-      
+
+        /// <summary>
+        /// 5 ya que el ultimo es la etiqueta.
+        /// </summary>
         public Instruccion[,] CacheInstrucciones = new Instruccion[5, 4];
+
+        /// <summary>
+        /// 6 ya que el 5 es la etiqueta y el 6 es el estado.
+        /// </summary>
         public int[,] CacheDatos = new int[6, 4];
 
         public Instruccion instruccionActual; //la primera vez será null
@@ -21,6 +28,13 @@ namespace ProyectoArqui.Logica
         public Nucleo(int id)
         {
             IdNucleo = id;
+            for(int i=0; i<=5; i++)
+            {
+                for (int j = 0; j <= 4; j++) {
+                    CacheInstrucciones[i, j] = ;
+
+                }
+            }
         }
 
         //Ejecuta instrucciones del ALU
@@ -91,6 +105,12 @@ namespace ProyectoArqui.Logica
         {
             for (int i = 0; i < limiteSuperior; i++)
                 Program.barreraReloj.SignalAndWait();
+        }
+
+        public void fetch() {
+
+
+
         }
     }
 }
