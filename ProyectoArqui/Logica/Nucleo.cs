@@ -16,8 +16,11 @@ namespace ProyectoArqui.Logica
         /// <summary>
         /// 5 ya que el ultimo es la etiqueta.
         /// </summary>
-        public Instruccion[,] CacheInstrucciones = new Instruccion[5, 4];
+        //public Instruccion[,] CacheInstrucciones = new Instruccion[5, 4];
 
+        public CacheInstrucciones cacheI = new CacheInstrucciones();
+
+        
         /// <summary>
         /// 6 ya que el 5 es la etiqueta y el 6 es el estado.
         /// </summary>
@@ -101,6 +104,10 @@ namespace ProyectoArqui.Logica
         }
 
         public void fetch() {
+            //pregunta en la cache si esta en el bloque i, 
+            //si si está entonces, busca y carga la instruccion al IR,
+            //sino esta lo traigo de la memoria de instrucciones (el bloque).
+
 
 
 

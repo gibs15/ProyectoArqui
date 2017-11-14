@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace ProyectoArqui.Logica
 {
+    /// <summary>
+    /// Esta clase la creamos para manejar de una manera mas entendible la logica de 
+    /// la cache de instrucciones y las etiquetas, usando la clase previamente creada 
+    /// llamada Instruccion.
+    /// </summary>
     public class CacheInstrucciones
     {
-     //   publi
+
+        Instruccion [,] bloqueInstruccion = new Instruccion[4,4];
+        int[] etiqueta = new int[4];
+
+        public CacheInstrucciones() {
+            //inicializamos las etiquetas en -1
+            for (int i = 0; i <= 4; i++)
+            {
+                    etiqueta[i] = -1;
+            }
+        }
+         
     }
 }

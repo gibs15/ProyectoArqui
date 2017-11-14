@@ -23,7 +23,7 @@ namespace ProyectoArqui.Logica
         //Registro Destino o Inmediato
         public int RD_IMM = 0;
 
-        //Valor de la etiqueta
-        public int Etiq = -1;
+        ////Valor de la etiqueta
+        //public int Etiq = -1;
     }
 }
