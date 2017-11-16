@@ -63,6 +63,14 @@ namespace ProyectoArqui
             openFileDialog1.ShowDialog();
             List<List<String>> listaHilillos = new List<List<String>>();
 
+            /*char[] delimiters = new char[] { '\r', '\n' };
+            string[] parts = value.Split(delimiters,
+                             StringSplitOptions.RemoveEmptyEntries);
+            Console.WriteLine(":::SPLIT, CHAR ARRAY:::");
+            for (int i = 0; i < parts.Length; i++)
+            {
+                Console.WriteLine(parts[i]);
+            }*/
 
             try
             {
@@ -78,21 +86,47 @@ namespace ProyectoArqui
                     //para mostrar en pantalla.
                     txtArchivo.AppendText("Archivo " + cont +"\n");
                     string[] lines = System.IO.File.ReadAllLines(file);
+                    string[] parts; 
                     foreach (string line in lines)
                     {
-                        txtArchivo.AppendText(line+"\n");
+                        char[] delimiters = new char[] {' '};
+                        parts = line.Split(delimiters,
+                                         StringSplitOptions.RemoveEmptyEntries);
 
-                        lineasTodoElArchivo = lineasTodoElArchivo + "" + line;
+                    
+                    for (int i = 0; i <= parts.Count()-1; i++) { 
+                        //txtArchivo.AppendText(parts[i]+"\n");
+                        lista.Add(parts[i]);
+                        }
+                  
+
+                        txtArchivo.AppendText(line+"\n");
+                        //lineasTodoElArchivo = lineasTodoElArchivo + "" + line;
                     }
-                    lista.Add(lineasTodoElArchivo);
                     listaHilillos.Add(lista);
                     cont++;
+
                 }
                 fileStream.Close();
+
+                int cont2 = 1;
+                foreach (List<string> listaDatosArchivos in listaHilillos){
+                    txtVerLista.AppendText("Archivo "+ cont2+"\n");
+                    for (int i =0; i <= listaDatosArchivos.Count()-1; i++){
+                        txtVerLista.AppendText(listaDatosArchivos[i]+" ");
+                     
+
+                    }
+                    txtVerLista.AppendText("\n");
+                    cont2++;
+                }
+                
             }
             catch (Exception Ex)
             {
                 Console.WriteLine(Ex.ToString());
+                txtArchivo.AppendText(Ex.ToString());
+
             }
         }
     }
